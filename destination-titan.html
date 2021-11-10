@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/destination.css">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  
+  <title>Titan | Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+  <header>
+
+    <a id="skip-link" href="#content">Skip to main content</a>
+
+    <div class="nav-wrap">
+
+      <img src="assets/shared/logo.svg" alt="" />
+
+      <nav id="primary-nav" aria-label="Main Menu">
+        <button id="menu-toggle" aria-expanded="false" aria-controls="primary-menu"><img src="assets/shared/icon-hamburger.svg" alt="Open main menu" /></button>
+        <ul id="primary-menu">
+          <li><a href="index.html"><span>00</span> Home</a></li>
+          <li><a class="active" href="#content" aria-current="page"><span>01</span> Destination</a></li>
+          <li><a href="crew-commander.html"><span>02</span> Crew</a></li>
+          <li><a href="technology-vehicle.html"><span>03</span> Technology</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <p class="breadcrumb"><span>01 </span>Pick your destination</p>
+
+  </header>
+
+  <main>
+
+    <img class="featured-image" src="assets/destination/image-titan.png" alt="" />
+  
+    <div class="main-content-wrapper">
+
+      <nav aria-label="Destination Menu">
+        <ul class="secondary-menu">
+          <li><a href="destination-moon.html">Moon</a></li>
+          <li><a href="destination-mars.html">Mars</a></li>
+          <li><a href="destination-europa.html">Europa</a></li>
+          <li><a class="active" href="#content" aria-current="page">Titan</a></li>
+        </ul>
+      </nav>
+
+      <section class="main-content" id="content">
+        <h1>Titan</h1>
+        <p>The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+      </section>
+
+      <ul class="stats">
+        <li>Avg. distance <span>1.6 bil. km</span></li>
+        <li>Est. travel time <span>7 years</span></li>
+      </ul>
+      
+    </div>
+
+  </main>
+  
+  <script src="scripts/menu.js"></script>
+</body>
+</html>

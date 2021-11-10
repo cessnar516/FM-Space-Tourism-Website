@@ -1,0 +1,66 @@
+@import 'base.sass'
+
+body
+  background-image: url('../assets/home/background-home-mobile.jpg')
+  @media screen and (min-width: $screen-tablet)
+    background-image: url('../assets/home/background-home-tablet.jpg')
+  @media screen and (min-width: $screen-desktop)
+    background-image: url('../assets/home/background-home-desktop.jpg')
+
+main
+  @media screen and (min-width: $screen-tablet)
+    padding: 6rem 10rem
+  @media screen and (min-width: $screen-desktop)
+    flex-direction: row
+    align-items: flex-end
+    padding-top: 10rem
+    padding-bottom: 8rem
+
+.main-content
+  @media screen and (min-width: $screen-desktop)
+    width: 40%
+  
+h1
+  font-size: 5rem
+  @media screen and (min-width: $screen-tablet)
+    font-size: 9.375rem
+  span
+    display: block
+    font-family: $font-sans
+    font-size: 1rem
+    letter-spacing: 0.1687rem
+    color: $primary
+    @media screen and (min-width: $screen-tablet)
+      font-size: 1.25rem
+    @media screen and (min-width: $screen-desktop)
+      font-size: 1.75rem
+
+.explore
+  display: flex
+  align-items: center
+  justify-content: center
+  font-family: $font-serif
+  font-size: 1.25rem
+  text-transform: uppercase
+  text-decoration: none
+  letter-spacing: 0.0625em
+  color: $background
+  background-color: $secondary
+  border-radius: 100%
+  height: 150px
+  width: 150px
+  margin-top: 3rem
+  &:hover
+    box-shadow: 0 0 0 40px hsla(0, 0%, 100%, .1)
+  @media screen and (min-width: $screen-tablet)
+    height: 242px
+    width: 242px
+    font-size: 2rem
+    margin-top: 6rem
+    &:hover
+      box-shadow: 0 0 0 70px hsla(0, 0%, 100%, .1)
+  @media screen and (min-width: $screen-desktop)
+    height: 274px
+    width: 274px
+    &:hover
+      box-shadow: 0 0 0 80px hsla(0, 0%, 100%, .1)

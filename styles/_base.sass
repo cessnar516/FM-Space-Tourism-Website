@@ -1,0 +1,271 @@
+/* BASE STYLES */
+
+// Variables
+
+$screen-tablet: 650px
+$screen-desktop: 1200px
+
+$font-sans: 'Barlow Condensed', sans-serif
+$font-serif: 'Bellefair', serif
+$base-font-size: 16px
+
+$background: hsl(230, 35%, 7%)
+$primary: hsl(231, 77%, 90%)
+$secondary: hsl(0, 0%, 100%)
+
+// Base Styles
+  
+*
+  box-sizing: border-box
+  &::before, &::after
+    box-sizing: inherit
+
+img
+  display: block
+  width: 100%
+
+button
+  background-color: transparent
+  padding: 8px
+  border: none
+
+body
+  background: $background
+  background-repeat: no-repeat
+  background-size: cover
+  font-family: $font-sans
+  color: $primary
+  margin: 0
+  padding: 0
+
+main
+  text-align: center
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: space-between
+  padding: 1rem
+  @media screen and (min-width: $screen-desktop)
+    text-align: left
+
+.main-content-wrapper
+  @media screen and (min-width: $screen-tablet)
+    display: flex
+    padding: 0 8rem
+  @media screen and (min-width: $screen-desktop)
+    padding: 0
+    width: 40%
+
+// Skip Link for Accessibility
+
+#skip-link
+  position: absolute
+  top: -1000px
+  display: block
+  padding: 1rem
+  background: $primary
+  color: $background
+  text-transform: uppercase
+  letter-spacing: 1px
+  text-decoration: none
+  &:focus
+    top: 0
+
+// Header Styles
+
+header
+  display: block
+  padding: 1rem 0
+  @media screen and (min-width: $screen-tablet)
+    padding: 0 0 0 2rem
+  @media screen and (min-width: $screen-desktop)
+    padding-left: 3rem
+    padding-top: 2rem
+  img
+    width: 40px
+    height: 40px
+    margin-left: 1rem
+    margin-bottom: 1rem
+    @media screen and (min-width: $screen-tablet)
+      width: 48px
+      height: 48px
+      margin-left: 0
+      margin-bottom: 0
+
+.js header img
+  margin-bottom: 0
+
+.nav-wrap
+  display: flex
+  flex-direction: column
+  @media screen and (min-width: $screen-tablet)
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+
+.js .nav-wrap
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+
+// Nav Styles
+nav
+  ul
+    list-style-type: none
+  a
+    display: block
+    text-decoration: none
+    text-transform: uppercase
+    letter-spacing: .1687em
+    &.active:hover
+      cursor: default
+
+// Primary Nav Styles
+
+#primary-nav
+  background-color: hsl(222, 23%, 17%)
+  @supports (backdrop-filter: blur())
+    backdrop-filter: blur(25px)
+    -webkit-backdrop-filter: blur(25px)
+    background-color: hsla(0, 0%, 100%, .03)
+  &.is-active
+    background-color: hsl(222, 23%, 17%)
+    height: 100vh
+    position: absolute
+    right: 0
+    top: 0
+    width: 70%
+    @supports (backdrop-filter: blur())
+      backdrop-filter: blur(25px)
+      -webkit-backdrop-filter: blur(25px)
+    #primary-menu
+      display: block
+
+.js #primary-nav
+  backdrop-filter: none
+  background-color: none
+  &.is-active
+    background-color: hsl(222, 23%, 17%)
+    @supports (backdrop-filter: blur())
+      backdrop-filter: blur(25px)
+      -webkit-backdrop-filter: blur(25px)
+      background-color: hsla(0, 0%, 100%, .03)
+  @media screen and (min-width: $screen-tablet)
+    background-color: hsl(222, 23%, 17%)
+    @supports (backdrop-filter: blur())
+      backdrop-filter: blur(25px)
+      -webkit-backdrop-filter: blur(25px)
+      background-color: hsla(0, 0%, 100%, .03)
+
+#menu-toggle
+  display: none
+
+.js #menu-toggle
+  display: block
+  position: absolute
+  right: 1rem
+  top: 1rem
+  img
+    width: 24px
+    height: 21px
+  @media screen and (min-width: $screen-tablet)
+    display: none
+
+#primary-menu
+  display: block
+  margin: 0
+  padding: 0 1rem 1rem
+  @media screen and (min-width: $screen-tablet)
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    margin: 0
+    padding: 0 0 0 2rem
+  @media screen and (min-width: $screen-desktop)
+    padding: 0 8rem
+  a
+    padding: 1rem
+    color: $secondary
+    border-bottom: 3px solid transparent
+    &.active
+      border-bottom: 3px solid $secondary
+      &:hover
+        border-bottom-color: $secondary
+    &:hover
+      border-bottom-color: hsla(0, 0%, 100%, .5)
+    span
+      font-weight: bold
+    @media screen and (min-width: $screen-tablet)
+      font-size: 0.875rem
+      padding: 2.5rem 1rem
+      & span
+        display: none
+    @media screen and (min-width: $screen-desktop)
+      font-size: 1rem
+      & span
+        display: inline
+
+.js #primary-menu
+  display: none
+  margin: 2rem 0 0
+  padding: 1rem
+  @media screen and (min-width: $screen-tablet)
+    display: flex
+    margin: 0
+    padding: 0 0 0 2rem
+  @media screen and (min-width: $screen-desktop)
+    padding: 0 8rem
+
+// Seconday Nav Styles
+
+.secondary-menu
+  margin: 0
+  padding: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  @media screen and (min-width: $screen-desktop)
+    justify-content: flex-start
+  a
+    display: block
+    padding: 1rem .5rem
+    &.active
+      color: $secondary
+
+// Typography Styles
+
+h1
+  font-family: $font-serif
+  color: $secondary
+  text-transform: uppercase
+  font-weight: normal
+  margin: 1rem 0 0
+
+p
+  font-size: 0.9375rem
+  line-height: 1.833
+  @media screen and (min-width: $screen-tablet)
+    font-size: 1rem
+    line-height: 1.875
+  @media screen and (min-width: $screen-desktop)
+    font-size: 1.125rem
+    line-height: 1.889
+
+.breadcrumb
+  font-size: 1rem
+  text-transform: uppercase
+  letter-spacing: 0.1687rem
+  text-align: right
+  color: $secondary
+  padding-right: 1.5rem
+  span
+    font-weight: bold
+    color: hsla(0, 0%, 100%, .25)
+  @media screen and (min-width: $screen-tablet)
+    font-size: 1.25rem
+    text-align: left
+    padding-right: 0
+  @media screen and (min-width: $screen-desktop)
+    font-size: 1.75rem
+    padding-left: 7rem
+    margin-top: 3rem

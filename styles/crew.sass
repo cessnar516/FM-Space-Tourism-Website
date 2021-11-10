@@ -1,0 +1,63 @@
+@import "base.sass"
+
+body
+  background-image: url('../assets/crew/background-crew-mobile.jpg')
+  @media screen and (min-width: $screen-tablet)
+    background-image: url('../assets/crew/background-crew-tablet.jpg')
+  @media screen and (min-width: $screen-desktop)
+    background-image: url('../assets/crew/background-crew-desktop.jpg')
+
+main
+  @media screen and (min-width: $screen-tablet)
+    flex-direction: column-reverse
+    padding: 2rem 2rem 0
+  @media screen and (min-width: $screen-desktop)
+    flex-direction: row-reverse
+    align-items: flex-start
+    padding: 0 10rem
+    margin-top: -3rem
+
+.main-content-wrapper
+  @media screen and (min-width: $screen-tablet)
+    flex-direction: column-reverse
+  @media screen and (min-width: $screen-desktop)
+    margin-top: 10rem
+
+.featured-image
+  width: 60%
+  margin: 1rem 0
+  @media screen and (min-width: $screen-desktop)
+    width: 50%
+    max-width: 38.5em
+    // max-height: 44.5em
+    margin: 0 0 0 6rem
+
+.secondary-menu
+  @media screen and (min-width: $screen-desktop)
+    margin-top: 4rem
+    margin-left: -0.5rem
+  a
+    font-size: 0.625rem
+    color: hsla(0, 0%, 100%, .17)
+    &:hover
+      color: hsla(0, 0%, 100%, .5)
+    &.active:hover
+      color: $secondary
+    @media screen and (min-width: $screen-tablet)
+      font-size: 0.9375rem
+
+h1
+  font-size: 1.5rem
+  line-height: 1.5
+  span
+    color: hsla(0, 0%, 100%, .5)
+    font-size: 1rem
+    display: block
+  @media screen and (min-width: $screen-tablet)
+    font-size: 2.5rem
+    span
+      font-size: 1.5rem
+  @media screen and (min-width: $screen-desktop)
+    font-size: 3.5rem
+    span
+      font-size: 2rem

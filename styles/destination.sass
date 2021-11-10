@@ -1,0 +1,73 @@
+@import 'base.sass'
+
+body
+  background-image: url('../assets/destination/background-destination-mobile.jpg')
+  @media screen and (min-width: $screen-tablet)
+    background-image: url('../assets/destination/background-destination-tablet.jpg')
+  @media screen and (min-width: $screen-desktop)
+    background-image: url('../assets/destination/background-destination-desktop.jpg')
+
+main
+  @media screen and (min-width: $screen-tablet)
+    padding: 1rem 2rem 2rem
+  @media screen and (min-width: $screen-desktop)
+    flex-direction: row
+    align-items: flex-end
+    padding: 0 10rem 6rem
+
+.main-content-wrapper
+  @media screen and (min-width: $screen-tablet)
+    flex-direction: column
+
+.featured-image
+  width: 60%
+  margin: 1rem 0
+  @media screen and (min-width: $screen-tablet)
+    width: 40%
+  @media screen and (min-width: $screen-desktop)
+    margin: 0 6rem 0 0
+
+.secondary-menu
+  a
+    font-size: .875rem
+    color: $primary
+    border-bottom: 3px solid transparent
+    &.active
+      border-bottom-color: $secondary
+      &:hover
+        border-bottom-color: $secondary
+    &:hover
+      border-bottom-color: hsla(0, 0%, 100%, .5)
+    @media screen and (min-width: $screen-tablet)
+      font-size: 1rem
+
+h1
+  font-size: 3.5rem
+  @media screen and (min-width: $screen-tablet)
+    font-size: 5rem
+  @media screen and (min-width: $screen-desktop)
+    font-size: 6.25rem
+
+.stats
+  list-style-type: none
+  display: flex
+  flex-direction: column
+  align-items: center
+  margin: 4rem 0 0 
+  padding: 0
+  li
+    font-size: .875rem
+    line-height: 1.75
+    text-transform: uppercase
+    letter-spacing: .1687em
+    padding-bottom: 1rem
+    span
+      font-size: 1.75rem
+      letter-spacing: 0
+      color: $secondary
+      font-family: $font-serif
+      display: block
+  @media screen and (min-width: $screen-tablet)
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
